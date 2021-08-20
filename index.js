@@ -12,7 +12,7 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   });
 
-  app.get('hsInfo', async(req, res) => {
+  app.get('/hsInfo', async(req, res) => {
     const fetchApi = await fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cardbacks", {
       "method": "GET",
       "headers": {
@@ -21,9 +21,8 @@ app.listen(port, () => {
       }
     })
     
-    const hsInfoResponse = await fetchApi.json();
-    res.json(hsInfoResponse);
-    console.log(hsInfoResponse);
+    const hsInfoResponse = await fetchApi.jsonParse();
+    res.jsonParse(hsInfoResponse);
   }
 
 );
