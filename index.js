@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const fetch = require('node-fetch');
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/'));
 
 
 
@@ -12,7 +13,7 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   });
 
-  app.get('./hsInfo', async(req, res) => {
+  app.get('/hsInfo', async(req, res) => {
     const fetchApi = await fetch("https://omgvamp-hearthstone-v1.p.rapidapi.com/cardbacks", {
       "method": "GET",
       "headers": {
