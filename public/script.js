@@ -36,7 +36,7 @@ async function getHsInfo() {
 
     let hsCardDesc = data[Math.floor(Math.random()*data.length)].description;
 
-    let hsCardObtain = data[Math.floor(Math.random()*data.length)].howToGet;
+    // let hsCardObtain = data[Math.floor(Math.random()*data.length)].howToGet;
 
     let hsCardImg = data[Math.floor(Math.random()*data.length)].img;
 
@@ -50,7 +50,7 @@ async function getHsInfo() {
     document.querySelector('.title-card').innerHTML = hsCardName;
     document.querySelector('.desc-card').innerHTML = hsCardDesc;
     document.querySelector('.img-card').src = hsCardImg;
-    document.querySelector('.obtain-card').innerHTML = hsCardObtain;
+    // document.querySelector('.obtain-card').innerHTML = hsCardObtain;
 
     // console.log(hsCardName);
     // console.log(hsCardDesc);
