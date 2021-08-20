@@ -27,7 +27,7 @@ document.querySelector('#generate-card').addEventListener('click', () => {
 
 
 async function getHsInfo() {
-    const response = await fetch('/hsInfo');
+    const response = await fetch('hsInfo');
     const data = await response.json();
 
     
